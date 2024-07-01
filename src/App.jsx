@@ -45,17 +45,33 @@ function App() {
           background: color,
         }}
       >
-        <button onClick={() => setTypeOfColor("hex")}>Create HEX color</button>
-        <button onClick={() => setTypeOfColor("rgb")}>Create RGB color</button>
-        <button
-          onClick={
-            typeOfColor === "hex"
-              ? handleCreateRandomHexColor
-              : handleCreateRandomRGBColor
-          }
+        <div
+          className=''
+          style={{
+            width: "50%",
+            margin: "0 auto",
+            paddingTop: "2rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
         >
-          Generate Random Color
-        </button>
+          <button onClick={() => setTypeOfColor("hex")}>
+            Create HEX color
+          </button>
+          <button onClick={() => setTypeOfColor("rgb")}>
+            Create RGB color
+          </button>
+          <button
+            onClick={
+              typeOfColor === "hex"
+                ? handleCreateRandomHexColor
+                : handleCreateRandomRGBColor
+            }
+          >
+            Generate Random Color
+          </button>
+        </div>
 
         <div
           className=''
